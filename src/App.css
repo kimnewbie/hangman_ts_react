@@ -1,42 +1,142 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 800px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container .result {
+    font-size: 2rem;
+    text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .keyboard__section {
+    align-self: stretch;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* HangmanDrawing */
+/* HangmanDrawing */
+/* HangmanDrawing */
+
+.hangman__drawing {
+    position: relative;
 }
 
-.card {
-  padding: 2em;
+.hangman__drawing .drawing__hook {
+    height: 50px;
+    width: 10px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.read-the-docs {
-  color: #888;
+.hangman__drawing .drawing__top {
+    height: 10px;
+    width: 200px;
+    background: #000;
+    margin-left: 120px;
+}
+
+.hangman__drawing .drawing__pillar {
+    height: 400px;
+    width: 10px;
+    background: #000;
+    margin-left: 120px;
+}
+
+.hangman__drawing .drawing__support {
+    height: 10px;
+    width: 250px;
+    background: #000;
+}
+
+.drawing__head {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 10px solid #000;
+    position: absolute;
+    top: 50px;
+    right: -30px;
+}
+
+.drawing__body {
+    width: 10px;
+    height: 100px;
+    background: #000;
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+.drawing__right_arm {
+    width: 100px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 150px;
+    right: -100px;
+    rotate: -30deg;
+    transform-origin: left bottom;
+}
+
+.drawing__left_arm {
+    width: 100px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    rotate: 30deg;
+    transform-origin: right bottom;
+}
+
+.drawing__right_leg {
+    width: 100px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 200px;
+    right: -90px;
+    rotate: 60deg;
+    transform-origin: left bottom;
+}
+
+.drawing__left_leg {
+    width: 100px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    rotate: -60deg;
+    transform-origin: right bottom;
+}
+
+/* HangmanWord */
+/* HangmanWord */
+/* HangmanWord */
+.hangman__word {
+    display: flex;
+    gap: .25em;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.word__underline {
+    border-bottom: .1em solid #000;
+}
+
+/* Keyboard */
+/* Keyboard */
+/* Keyboard */
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: .5rem;
 }
